@@ -3,7 +3,7 @@ package com.example.vivavoce;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import android.support.v7.app.ActionBarActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +22,7 @@ import android.speech.tts.TextToSpeech.OnInitListener;
 
 
 public class MainActivity extends Activity implements OnClickListener, OnInitListener{
-	private ImageView imageYes;
+	private ImageView imageYes;/* to know which one is clicked */
 	private Button buttonYes;
 	private TextToSpeech tts;
 	protected static final int REQUEST_OK = 1;
