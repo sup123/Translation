@@ -3,10 +3,16 @@ package com.example.vivavoce;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import org.ispeech.SpeechSynthesis;
+import org.ispeech.error.InvalidApiKeyException;
+
+import com.memetix.mst.language.Language;
+
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,15 +32,38 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
 	private Button buttonYes;
 	private TextToSpeech tts;
 	protected static final int REQUEST_OK = 1;
+	
+	//ADDED THIS
+	public static SpeechSynthesis phrase_tts;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//ADDED THIS
+        try {
+        	phrase_tts = SpeechSynthesis.getInstance(this);
+		} catch (InvalidApiKeyException e) {
+			Log.i("Error", "Key was invalid");
+			Log.i("Key was invalid","Error");
+			e.printStackTrace();
+		}
+		
+		
 		setContentView(R.layout.activity_main);
 		tts = new TextToSpeech(this, this);
 		buttonYes = (Button)findViewById(R.id.button1);
 		imageYes = (ImageView)findViewById(R.id.image1);
 		imageYes.setOnClickListener(this); 
 		buttonYes.setOnClickListener(this);
+		
+		
+		
+	    
+	    
+		
+		
+		
 	}
 
 	@Override
@@ -114,7 +143,13 @@ public class MainActivity extends Activity implements OnClickListener, OnInitLis
 	}
 }
 
-
+/*	Example Usage of Phrase
+    	Phrase phraseToTranslate = new Phrase(toTranslate, Language.ENGLISH, 
+    			Language.SPANISH);
+    	
+    	PhraseExtraThread task = new PhraseExtraThread();
+    	task.execute(new Phrase[]{phraseToTranslate});
+ */
 
 
 
