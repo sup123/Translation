@@ -8,29 +8,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.vivavoce.MainActivity" >
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="77dp"
-        android:ems="10"
-        android:inputType="none"
-        android:text="@string/translate" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:text="@string/Speak" />
-
     <ImageButton
         android:id="@+id/image1"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="25dp"
         android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
@@ -44,5 +25,45 @@
         android:layout_below="@+id/image1"
         android:layout_centerHorizontal="true"
         android:text="@string/Dots" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp"
+        android:ems="10"
+        android:inputType="none"
+        android:text="@string/translate" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="28dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_below="@+id/spinner1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_centerHorizontal="true" 
+        android:layout_centerVertical="true"
+        android:text="@string/Speak" />
 
 </RelativeLayout>

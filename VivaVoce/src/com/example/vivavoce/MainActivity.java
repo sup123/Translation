@@ -2,6 +2,11 @@ package com.example.vivavoce;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
+import org.ispeech.SpeechSynthesis;
+import org.ispeech.error.InvalidApiKeyException;
+
+import com.memetix.mst.language.Language;
 /*
 import org.ispeech.SpeechSynthesis;
 import org.ispeech.error.InvalidApiKeyException;
